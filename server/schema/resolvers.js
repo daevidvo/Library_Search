@@ -5,17 +5,16 @@ const { signToken } = require("../utils/auth.js");
 const resolvers = {
   Query: {
     me: async (parent, args, context) => {
-      console.log(context.user)
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate("Books");
+        return await User.findOne({_id: context.user._id});
       }
-      throw new AuthenticationError('Please log in')
+      throw new AuthenticationError("Please log in");
     },
   },
 
   Mutation: {
     loginUser: async (parent, { email, password }, context) => {
-      console.log(email, password)
+      console.log(email, password);
       const user = await User.findOne({ email });
 
       if (!user) {
@@ -34,7 +33,7 @@ const resolvers = {
     },
     addUser: async (parent, { username, email, password }) => {
       const user = await User.create({ username, email, password });
-      console.log(user)
+      console.log(user);
       const token = signToken(user);
       return { token, user };
     },
@@ -42,7 +41,7 @@ const resolvers = {
       if (context.user) {
         const user = await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { savedBooks: bookData.savedBooks } }
+          { $addToSet: { savedBooks: bookData } }
         );
 
         return user;
@@ -55,7 +54,7 @@ const resolvers = {
           { $pull: { savedBooks: { bookId: bookId } } }
         );
 
-        return user
+        return user;
       }
     },
   },
