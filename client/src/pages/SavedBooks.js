@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   Container,
   Card,
@@ -18,7 +18,7 @@ import { removeBookId } from '../utils/localStorage';
 
 const SavedBooks = () => {
   const [userData, setUserData] = useState({});
-  const [deleteBook, {error}] = useMutation(REMOVE_BOOK)
+  const [deleteBook] = useMutation(REMOVE_BOOK)
 
   const {loading, data} = useQuery(GET_ME)
 
