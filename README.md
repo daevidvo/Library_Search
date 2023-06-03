@@ -39,8 +39,6 @@ The front end was made with React.js to handle client-side rendering along with 
 ## Table of Contents 📋
 * [Installation Instructions](#installation-instructions-📥)
 * [Usage Information](#usage-information-✅)
-* [Contribution Guidelines](#contribution-guidelines-🤝)
-* [Test Instructions](#test-instructions-🧪)
 * [Author Info](#author-info-👺)
 * [Questions?](#questions-❓)
 * [License](#license-🚩)
@@ -49,25 +47,23 @@ The front end was made with React.js to handle client-side rendering along with 
 
 ## Installation Instructions 📥
 
-install
+If you'd like to install this app, follow the steps below:
+
+1. Download or clone the contents of this repo on to your local machine
+2. Open the terminal in the root directory
+3. Run `npm install` along with `npm run install` to download all of the dependencies
+4. Run `npm run develop` to create a build and start the backend of this application
 
 ------------------------
 
 ## Usage Information ✅
 
-usage
+If you'd like to use this app, follow the steps below:
 
-------------------------
-
-## Contribution Guidelines 🤝
-
-DELETE THIS
-
-----------------------
-
-## Test Instructions 🧪
-
-DELETE THIS
+1. Create an account by clicking on the signup button in the upper right
+2. Once you're signed in, it will redirect you to the homepage and from there, simply type in the book that you'd like to search in the `search bar` and click `Submit Search`
+3. If you find a book you'd like to save, click on `Save Book` underneath that book's information
+4. To view your saved books, in click on the `See your books` button in the upper right.
 
 ------------------------
 
